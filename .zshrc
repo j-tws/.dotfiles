@@ -1,8 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export AWS_CONFIG_FILE=~/nh/nexus-health/.aws/config
+export PSQL_CONNECTION_STRING="postgres://digitalhealth2:@localhost:5500"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git asdf)
+plugins=(git asdf zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,19 +103,32 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -l"
 alias lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+alias gg="git log --graph --oneline --decorate"
 alias ga="git add"
 alias gc="git commit"
 alias gca="git commit --amend"
+alias gcan="git commit --amend --no-edit"
 alias gcf="git commit --fixup"
 alias gr="git rebase"
 alias glo="git log --oneline"
 alias squash="git rebase -i origin/main --autosquash"
 alias gpf="git push --force"
-
-. /usr/local/opt/asdf/libexec/asdf.sh
-export GPG_TTY=$(tty)
-export GPG_TTY=$(tty)
-
-eval "$(~/.local/bin/mise activate zsh)"
-
+alias bx="bundle exec"
+alias creds="EDITOR='code --wait' rails credentials:edit --environment"
+alias ssh-prod="bin/ssh -p nh-prod -e prod -c nexus"
+alias ssh-stage="bin/ssh -p nh-dev -e stage -c nexus"
+# able to create file in a newly created folder in one line
 touch2() { mkdir -p "$(dirname "$1")" && touch "$1"; }
+
+# used for commiting and pushing dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# . "$HOME/.asdf/asdf.sh"
+export GPG_TTY=$(tty)
+export EDITOR="code --new-window"
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+eval "$(~/.local/bin/mise activate zsh)"
