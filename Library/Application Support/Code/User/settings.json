@@ -1,0 +1,71 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+
+  "telemetry.telemetryLevel": "off", // don't spy on me Microsoft
+  "security.workspace.trust.untrustedFiles": "open", // otherwise it asks for every new project
+  "files.autoSave": "onFocusChange", // auto save whenever you switch apps!
+  "editor.wordWrap": "on",
+  "editor.guides.bracketPairs": false, // nice for newb visibility
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "search.exclude": { "**/tmp": true },
+  "editor.tabSize": 2,
+
+  // ruby settings
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp", // Use the Ruby LSP as the default formatter
+    "editor.formatOnSave": false, // Format files automatically when saving
+    "editor.tabSize": 2, // Use 2 spaces for indentation
+    "editor.insertSpaces": true, // Use spaces and not tabs for indentantion
+    "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
+    "editor.formatOnType": true // Enable formatting while typing
+  },
+
+  "[go]": {
+    "editor.formatOnSave": false
+  },
+
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": false,
+
+  // Using the light mode
+  "indentRainbow.indicatorStyle": "light",
+  // we use a simple 1 pixel wide line
+  "indentRainbow.lightIndicatorStyleLineWidth": 1,
+  // the same colors as above but more visible
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.3)",
+    "rgba(127,255,127,0.3)",
+    "rgba(255,127,255,0.3)",
+    "rgba(79,236,236,0.3)"
+  ],
+  "liveServer.settings.donotShowInfoMsg": true,
+  "window.commandCenter": false,
+  "zenMode.showTabs": "none",
+  "editor.tabCompletion": "on",
+
+  // don't show header tab
+  "workbench.editor.showTabs": "none",
+
+  // multiline command
+  // this will scroll the window without moving the cursor
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.up1LineKeepCursor",
+      "sequence": [
+        {"command": "editorScroll", "args": {"to": "up", "by": "line" }},
+        "cursorUp"
+      ]
+    },
+    {
+      "command": "multiCommand.down1LineKeepCursor",
+      "sequence": [
+        {"command": "editorScroll", "args": {"to": "down", "by": "line" }},
+        "cursorDown"
+      ]
+    }
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  
+}
