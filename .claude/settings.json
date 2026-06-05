@@ -1,0 +1,11 @@
+{
+  "env": {
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "ANTHROPIC_MODEL": "au.anthropic.claude-opus-4-8",
+    "MAX_THINKING_TOKENS": "0",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "4096",
+    "AWS_REGION": "ap-southeast-2",
+    "AWS_PROFILE": "ai_bdrk"
+  },
+  "theme": "auto"
+}

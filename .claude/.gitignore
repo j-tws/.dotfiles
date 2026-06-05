@@ -1,0 +1,6 @@
+/*
+!.gitignore
+!CLAUDE.md
+!settings.json
+# add future config files explicitly, e.g.:
+# !keybindings.json
