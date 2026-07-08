@@ -1,0 +1,23 @@
+[tools]
+aws = "2"
+go = "1"
+node = "24"
+python = "3"
+ruby = "3.4.7"
+cloudflared = "latest"
+fzf = "latest"
+github-cli = "latest"
+gitleaks = "latest"
+gum = "latest"
+jj = "latest"
+jq = "latest"
+pandoc = "latest"
+
+# Go dev tools
+"go:github.com/go-delve/delve/cmd/dlv" = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+"go:honnef.co/go/tools/cmd/staticcheck" = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["ruby"]
+experimental = true

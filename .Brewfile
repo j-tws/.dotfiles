@@ -1,7 +1,5 @@
 tap "buildkite/buildkite"
 tap "homebrew/services"
-# Cloudflare Tunnel client (formerly Argo Tunnel)
-brew "cloudflared"
 # Isolated development environments using Docker
 brew "docker-compose"
 # Command-line tool to interact with exercism.io
@@ -10,8 +8,6 @@ brew "exercism"
 brew "expect"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
-# Command-line fuzzy finder written in Go
-brew "fzf"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -20,14 +16,8 @@ brew "git"
 brew "gitleaks"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
-# Tool for glamorous shell scripts
-brew "gum"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
-# Git-compatible distributed version control system
-brew "jj"
-# Lightweight and flexible command-line JSON processor
-brew "jq"
 # Postgres C API library
 brew "libpq"
 # YAML Parser
@@ -38,8 +28,6 @@ brew "neovim"
 brew "sqlite"
 # C library to read whole-slide images (a.k.a. virtual slides)
 brew "openslide"
-# Swiss-army knife of markup format conversion
-brew "pandoc"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Official tldr client written in Rust
@@ -94,10 +82,17 @@ vscode "vscodevim.vim"
 vscode "vue.volar"
 vscode "wingrunr21.vscode-ruby"
 vscode "yzane.markdown-pdf"
-go "github.com/go-delve/delve/cmd/dlv"
 go "cmd/go"
 go "cmd/gofmt"
-go "golang.org/x/tools/gopls"
-go "honnef.co/go/tools/cmd/staticcheck"
 npm "corepack"
 brew "hugo"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Command-line shell and scripting language
+brew "powershell"
+# Command-line interface for 1Password
+cask "1password-cli"
+# General-purpose scripting language
+brew "php"
+# Open source relational database management system
+brew "mysql"
